@@ -547,16 +547,16 @@ function play_letter(letter)
 	{
 			if(letter)
 			{
-			var path = window.location.pathname;
-			path = path.substr( path, path.length - 10 );
+			//var path = window.location.pathname;
+			//path = path.substr( path, path.length - 10 );
 			//path =  'file://' + path;
-			path =  'http://127.0.0.1' + path;
+			//path =  'http://127.0.0.1' + path;
 			
-			console.log('playing letter: '+path+'audio/'+letter+'.mp3');
+			//console.log('playing letter: '+path+'audio/'+letter+'.mp3');
 			
 			var audio = document.createElement("audio");
 			//audio.src='audio/'+letter+'.mp3';
-			audio.src=path+'audio/'+letter+'.mp3';
+			audio.src='http://curiosum.pl/literki/audio/'+letter+'.mp3';
 			audio.play();
 			delete audio;
 			
