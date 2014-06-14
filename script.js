@@ -552,12 +552,22 @@ function play_letter(letter)
 			//audio.src='/android_asset/www/audio/'+letter+'.mp3';
 			//audio.style.display='none';
 			//document.getElementById('audio_container').appendChild(audio);
-			
-			audio=new Media('/android_asset/www/audio/'+letter+'.mp3');
+			console.log('playing letter: '+letter);
+			audio=new Media('/android_asset/www/audio/'+letter+'.mp3',
+				// success callback
+				function () {
+					console.log("playAudio():Audio Success");
+				},
+				// error callback
+				function (err) {
+					console.log("playAudio():Audio Error: " + err);
+				}
+			);
 			
 			audio.play();
-			delete audio;
-			console.log('playing letter: '+letter);
+			audio.release();
+			//delete audio;
+		
 			}
 	}	
 	
