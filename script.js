@@ -553,14 +553,15 @@ function play_letter(letter)
 			//audio.style.display='none';
 			//document.getElementById('audio_container').appendChild(audio);
 			console.log('playing letter: '+letter);
-			var audio=new Media('/android_asset/www/audio/'+letter+'.mp3',
+			var audio=new Media('audio/'+letter+'.mp3',
 				// success callback
 				function () {
 					console.log("playAudio():Audio Success");
 				},
 				// error callback
 				function (err) {
-					console.log("playAudio():Audio Error: " + err);
+					console.log("playAudio():Audio Error: ");
+					console.log(err);
 				}
 			);
 			
