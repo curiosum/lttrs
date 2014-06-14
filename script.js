@@ -533,7 +533,9 @@ function play_word(word)
 			{
 			var audio = document.createElement("audio");
 			audio.id='audio_'+word;
-			audio.src='mp3/'+word+'.mp3';
+			//audio.src='mp3/'+word+'.mp3';
+			audio.src='http://translate.google.com/translate_tts?ie=utf-8&tl=pl&q='+word
+			
 			audio.style.display='none';
 			//document.getElementById('audio_container').appendChild(audio);
 			audio.play();
