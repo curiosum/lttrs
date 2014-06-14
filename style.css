@@ -1,0 +1,42 @@
+body{margin:0; padding:0;}
+#container {
+		
+		width: 100%;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		background: url(bg.jpg) center center no-repeat;
+		background-size: cover;
+		-webkit-background-size: cover;
+    -ms-touch-action: none;
+    ms-touch-action: none;
+	}
+	literka{
+		position: absolute;
+		left: 0;
+		top: 0;
+		text-align: center;
+		padding: 4px;;
+		border: 1px solid #000;
+		width: 40px;
+		height: 40px;
+		background: #eee;
+		text-transform: uppercase;
+		font-size: 40px;
+		line-height: 40px;
+		
+
+		-ms-touch-action: none;
+		ms-touch-action: none;
+	}
+	literka.word, literka.word:hover{background: #F1F166;}
+	
+	literka:hover{background: #fff;}
+	.plate{
+		position: absolute;
+		left: -200px;
+		top: -200px;
+
+	}
+	
+	#debug{position: absolute;		width: 100%;	bottom: 0;	background: rgba(133, 130, 130, 0.43);}
