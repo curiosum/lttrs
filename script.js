@@ -548,7 +548,8 @@ function play_letter(letter)
 			if(letter)
 			{
 			var audio = document.createElement("audio");
-			audio.src='audio/'+letter+'.mp3';
+			//audio.src='audio/'+letter+'.mp3';
+			audio.src='/android_asset/www/audio/'+letter+'.mp3';
 			audio.style.display='none';
 			//document.getElementById('audio_container').appendChild(audio);
 			audio.play();
