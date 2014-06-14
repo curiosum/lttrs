@@ -558,8 +558,8 @@ function play_letter(letter)
 			path = path.substr( path, path.length - 10 );
 			path =  'file://' + path;
 			 
-			console.log('playing letter: '+path+letter+'.mp3');
-			var audio=new Media(path+letter+'.mp3',
+			console.log('playing letter: '+path+'audio/'+letter+'.mp3');
+			var audio=new Media(path+'audio/'+letter+'.mp3',
 				// success callback
 				function () {
 					console.log("playAudio():Audio Success");
