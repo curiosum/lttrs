@@ -547,33 +547,37 @@ function play_letter(letter)
 	{
 			if(letter)
 			{
-			//var audio = document.createElement("audio");
-			//audio.src='audio/'+letter+'.mp3';
-			//audio.src='/android_asset/www/audio/'+letter+'.mp3';
-			//audio.style.display='none';
-			//document.getElementById('audio_container').appendChild(audio);
-			
-			
 			var path = window.location.pathname;
 			path = path.substr( path, path.length - 10 );
 			path =  'file://' + path;
 			 
 			console.log('playing letter: '+path+'audio/'+letter+'.mp3');
-			var audio=new Media(path+'audio/'+letter+'.mp3',
-				// success callback
-				function () {
-					console.log("playAudio():Audio Success");
-				},
-				// error callback
-				function (err) {
-					console.log("playAudio():Audio Error: ");
-					console.log(err);
-				}
-			);
 			
+			var audio = document.createElement("audio");
+			//audio.src='audio/'+letter+'.mp3';
+			audio.src=path+'audio/'+letter+'.mp3';
 			audio.play();
-			audio.release();
-			//delete audio;
+			delete audio;
+			
+			
+			//audio.style.display='none';
+			//document.getElementById('audio_container').appendChild(audio);
+			
+			
+			
+			// var audio=new Media(path+'audio/'+letter+'.mp3',				
+				// function () {// success callback
+					// console.log("playAudio():Audio Success");
+				// },				
+				// function (err) {// error callback
+					// console.log("playAudio():Audio Error: ");
+					// console.log(err);
+				// }
+			// );
+			
+			// audio.play();
+			// audio.release();
+			//
 		
 			}
 	}	
