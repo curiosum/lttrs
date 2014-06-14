@@ -552,8 +552,14 @@ function play_letter(letter)
 			//audio.src='/android_asset/www/audio/'+letter+'.mp3';
 			//audio.style.display='none';
 			//document.getElementById('audio_container').appendChild(audio);
-			console.log('playing letter: '+letter);
-			var audio=new Media('/android_asset/www/audio/'+letter+'.mp3',
+			
+			
+			var path = window.location.pathname;
+			path = path.substr( path, path.length - 10 );
+			path =  'file://' + path;
+			 
+			console.log('playing letter: '+path+letter++'.mp3');
+			var audio=new Media(path+letter+'.mp3',
 				// success callback
 				function () {
 					console.log("playAudio():Audio Success");
